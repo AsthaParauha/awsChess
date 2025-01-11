@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-image: url('https://images7.alphacoders.com/116/1161019.jpg');
+    background-size: cover; /* Optional: This will cover the whole screen */
+    background-position: center; /* Optional: This will center the image */
+    background-repeat: no-repeat; /* Optional: This prevents the image from repeating */
+    margin: 0px;
+}
+
+/* navigation bara design */
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3.6rem;
+    display: block;
+    /* position: sticky; */
+    /* position: fixed; */
+    margin: 0px;
+    margin-top: 0px;
+    /* background-color: rgb(231, 203, 219); */
+    background-color: rgb(77, 39, 13);
+    position: sticky;
+}
+
+ul {
+    margin: 0px;
+    padding: 0.7rem;
+    padding-bottom: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    /* align-items: left; */
+    padding-left: 0px;
+}
+
+li {
+    margin-left: 0.3em;
+    border: none;
+    color: white;
+    list-style-type: none;
+    font-size: 1em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+
+/* a:hover {
+ background-color: rgb(168, 92, 139); 
+    color: white; 
+
+} */
+
+a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+
+}
+
+
+#li4 {
+    align-self: flex-end;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+a#signin {
+
+    border-radius: 2em;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    /* background-color: rgb(26, 115, 223); */
+    color: white;
+    border: 1px solid white;
+}
+footer{
+    margin-bottom: 0px;
+    height: 3em;
+    width: 100%;
+    background-color: rgb(77, 39, 13);
+    padding: 0.7em;
+}
+.mid{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    text-align: center;
+    size: small;
+    color: white;
+    margin: 0.1em;
+    line-height: 1.5em;
+    font-size: 0.8em;
+}
+footer{
+    margin:0px;
+}
+
+#header{
+    height: auto;
+    /* width: 35%; */
+    position: absolutes;
+}
+#part1{
+    width: 35%;
+    float: left;
+}
+#part2{
+    width: 65%;
+    float: right;
+}
+#part3{
+    background-color: white;
+}
+#chessgame{
+    height:89vh;
+    width: 89vh;
+}
+#root{
+    height: 35rem;
+    width: 35rem;
+    border: 3px solid rgb(51, 51, 20);
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@media  (max-width:500px){
+    #li4{
+        margin-left: 2em;
+        font-size: medium;
+    }
+    li{
+        font-size: medium;
+    }
+    p{
+        text-align: left;
+    }
+}
