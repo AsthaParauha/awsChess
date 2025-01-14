@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Satranj Ka Taj</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- <link rel="stylesheet" href="aboutStyle.css"> -->
   <link rel="stylesheet" href="formstyle.css">
   <link rel="stylesheet" href="style.css">
@@ -28,9 +30,9 @@
   <!--  MID PART -->
   <div class="mid" id="midpart">
     <div id="part1">
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis ullam perferendis placeat pariatur? Inventore commodi, soluta, nihil expedita voluptatum voluptas explicabo, fugit veritatis non dicta quaerat voluptatibus doloribus perferendis!</p>
-      <buttton id="playnow">Play Now</buttton>
+      <h1 style="margin-top: 2em;">Welcome to the Chess World.</h1>
+      <p style="margin-top: 2em;" id="part1para">Chess has been most popular sicne it has stated. This game will strain every nerve of your Brain. Ready to Play?</p>
+      <buttton id="playnow" style="margin-top: 2em;">Play Now</buttton>
     </div>
 
     <div id="part2">
@@ -39,6 +41,7 @@
       <form action="login.php" method="POST" class="formcontanior" id="form">
         <div class="form">
           <button class="close" id="closeform" type="button">X</button>
+          <div class="success" id="loginSuccess" style="display: none;">Logined Successfully.</div>
           <h3>LOGIN</h3>
           <!-- name -->
           <div class="formElement" id="element1">
@@ -52,16 +55,18 @@
           </div>
           <p>New user ? <span id="register">Register</span></p>
           <div class="formElement">
-            <button id="signin" type="submit">Log in</button>
+            <button id="fLogin" type="submit">Log in</button>
           </div>
 
         </div>
       </form>
 
-      <!-- SIGN IN FORM -->
+      <!-- REGISTER FORM -->
       <form action="register.php" method="POST" class="formcontanior" id="Sform">
         <div class="form">
           <button class="close" id="closeSform" type="button">X</button>
+          <div class="success" id="registerSuccess" style="display: none;">Registered Successfully.</div>
+
           <h3>REGISTER</h3>
           <!-- name -->
           <div class="formElement" id="element1">
@@ -83,7 +88,7 @@
             <input type="text" name="password" id="passord">
           </div> -->
           <div class="formElement">
-            <button id="signin" type="submit">Sign in</button>
+            <button id="registerSubmit" type="submit">Sign in</button>
           </div>
 
         </div>
@@ -97,8 +102,8 @@
             <img src="./img/allChess.jpeg" alt="">
         </div>
         <div id="header">
-            <h1>Hello,<br>Chess basics moves are here!</h1>
-            <p>Congratulations! for begining the journy of chess with us. Have a nice time with your chessboard ahead</p>
+            <h1 style="color:black">Hello,<br>Chess basics moves are here!</h1>
+            <p style="color: black;">Congratulations! for begining the journy of chess with us. Have a nice time with your chessboard ahead</p>
         </div>
     </div>
     <hr>
@@ -109,7 +114,7 @@
                 <img src="./img/queen.png" alt="Here is an image" id="img1" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The queen is the most powerful piece in chess, combining the abilities of the rook and bishop. It can move any number of squares vertically, horizontally, or diagonally, making it highly versatile. This piece is crucial for both offense and defense, often dominating the board during the game.  
+                <p class="itemPara"> <span>QUEEN</span><br>The queen is the most powerful piece in chess, combining the abilities of the rook and bishop. It can move any number of squares vertically, horizontally, or diagonally, making it highly versatile. This piece is crucial for both offense and defense, often dominating the board during the game.  
                     <br>  
                     - Moves any number of squares in straight lines or diagonals.  <br>
                     - Combines the movement of rooks and bishops.<br>  
@@ -121,7 +126,7 @@
                 <img src="./img/king.jpeg" alt="Here is an image" id="img2" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The king is the most important piece in chess, but its movement is limited. It moves one square in any direction—vertically, horizontally, or diagonally. While the king is essential to protect, it can also be used strategically in endgames to control key squares and support other pieces.  
+                <p class="itemPara"> <span>KING</span><br>The king is the most important piece in chess, but its movement is limited. It moves one square in any direction—vertically, horizontally, or diagonally. While the king is essential to protect, it can also be used strategically in endgames to control key squares and support other pieces.  
                     <br>  
                     - Moves one square in any direction.  <br>
                     - Cannot move into a square threatened by an opponent's piece. <br> 
@@ -133,7 +138,7 @@
                 <img src="./img/knight.png" alt="Here is an image" id="img3" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The knight moves in a unique "L" shape: two squares in one direction and then one square perpendicular, or vice versa. It is the only piece that can jump over others, making it highly tactical. Knights are particularly effective in tight positions and can threaten multiple squares simultaneously.  
+                <p class="itemPara"> <span>KNINGT</span><br>The knight moves in a unique "L" shape: two squares in one direction and then one square perpendicular, or vice versa. It is the only piece that can jump over others, making it highly tactical. Knights are particularly effective in tight positions and can threaten multiple squares simultaneously.  
                     <br>  
                     - Moves in an "L" shape: two squares in one direction, one perpendicular. <br>
                     - Can jump over other pieces. <br> 
@@ -145,7 +150,7 @@
                 <img src="./img/bishup.png" alt="Here is an image" id="img4" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The bishop moves diagonally any number of squares, staying on its original color throughout the game. It is most effective in open positions, where its long-range capabilities shine. Bishops work well in pairs, covering both colors and controlling large areas of the board for strategic attacks or defenses.  
+                <p class="itemPara"> <span>BISHUP</span><br>The bishop moves diagonally any number of squares, staying on its original color throughout the game. It is most effective in open positions, where its long-range capabilities shine. Bishops work well in pairs, covering both colors and controlling large areas of the board for strategic attacks or defenses.  
                     <br>  
                     - Moves diagonally, unlimited squares.  <br>
                     - Stays on the same color throughout the game.  <br>
@@ -157,7 +162,7 @@
                 <img src="./img/rook.png" alt="Here is an image" id="img5" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The rook moves horizontally or vertically across the board, covering any number of squares in a straight line. It is a powerful piece, especially in the endgame, where its long-range movement can dominate. Rooks are often used to control files and ranks, delivering strong attacks and defense.  
+                <p class="itemPara"> <span>ROOK</span><br>The rook moves horizontally or vertically across the board, covering any number of squares in a straight line. It is a powerful piece, especially in the endgame, where its long-range movement can dominate. Rooks are often used to control files and ranks, delivering strong attacks and defense.  
                     <br>  
                     - Moves vertically or horizontally, any number of squares.  <br>
                     - Essential for controlling files and ranks.  <br>
@@ -169,7 +174,7 @@
                 <img src="./img/pwan2.png" alt="Here is an image" id="img6" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The pawn moves forward one square at a time, but it captures diagonally. On its first move, it has the option to move two squares. Pawns are crucial for controlling the center and promoting to other pieces upon reaching the opponent's back rank. Their movement is strategic and gradual.  
+                <p class="itemPara"> <span>PWAN</span><br>The pawn moves forward one square at a time, but it captures diagonally. On its first move, it has the option to move two squares. Pawns are crucial for controlling the center and promoting to other pieces upon reaching the opponent's back rank. Their movement is strategic and gradual.  
                     <br>  
                     - Moves forward one square, but captures diagonally. <br> 
                     - Can move two squares on its first move.<br>
@@ -181,7 +186,7 @@
                 <img src="./img/pwan1.png" alt="Here is an image" id="img8" class="itemImg">
             </div>
             <div class="content" class="paraContent">
-                <p class="itemPara">The pawn moves forward one square at a time, but it captures diagonally. On its first move, it has the option to move two squares. Pawns are crucial for controlling the center and promoting to other pieces upon reaching the opponent's back rank. Their movement is strategic and gradual.  
+                <p class="itemPara"> <span>PWAN ATTACKS</span><br>The pawn moves forward one square at a time, but it captures diagonally. On its first move, it has the option to move two squares. Pawns are crucial for controlling the center and promoting to other pieces upon reaching the opponent's back rank. Their movement is strategic and gradual.  
                     <br>  
                     - Moves forward one square, but captures diagonally.  <br>
                     - Can move two squares on its first move.  <br>
@@ -253,6 +258,34 @@
     //   // document.getElementById('midpart').style.display="none";
     //   document.getElementById('root').style.display="block";
     // }
+
+    // handling submit of login 
+    login_button= document.getElementById("fLogin");
+    login_button.onclick=()=>{
+      //using AJEX 
+      $.ajax({
+            url:'login.php',
+            success:function(data){
+                console.log(data);
+                // console.log(data.name,data.age);
+                document.getElementById("loginSuccess").style.display="block";
+            }
+        });
+    }
+    // handling submit of register 
+    register_button= document.getElementById("registerSubmit");
+    register_button.onclick=()=>{
+      //using AJEX 
+      $.ajax({
+            url:'register.php',
+            success:function(data){
+                console.log(data);
+                // console.log(data.name,data.age);
+                document.getElementById("registerSuccess").style.display="block";
+
+            }
+        });
+    }
 
   </script>
   <!-- <script src=""></script> -->
