@@ -158,4 +158,7 @@ footer{
     p{
         text-align: left;
     }
+    #midpart{
+        width: 95%;
+    }
 }
