@@ -13,7 +13,7 @@
             $data="SELECT * FROM chessplayers WHERE name ='$name' and password ='$password';";
             $result=mysqli_query($con, $data);
             if ($result && $name=['name'] && $password=['password']){
-                echo "You have been logged in Sucessfully.";
+                echo "You have been logged in";
             }
             else if($result && $name!=['name'] && $password=['password']){
                 echo "Please Enter your valid name.";

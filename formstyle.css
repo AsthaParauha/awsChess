@@ -65,12 +65,7 @@ button{
     
 }
 
-#fLogin{
-    background: rgba(102, 59, 18, 0.74);
-    margin-top: 1em;
-    height: 2.5em;
-}
-#registerSubmit{
+#signin{
     background: rgba(102, 59, 18, 0.74);
     margin-top: 1em;
     height: 2.5em;
