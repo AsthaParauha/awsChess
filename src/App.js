@@ -4,7 +4,7 @@ import {Chessboard} from 'react-chessboard';
 
 const ChessGame = () => {
   const [game, setGame] = useState(new Chess());
-  const [computerColor, setComputerColor] = useState("b"); // 'b' for black, 'w' for white
+  const [computerColor] = useState("b"); // 'b' for black, 'w' for white
 
   const makeComputerMove = () => {
     const moves = game.moves();
